@@ -1,0 +1,64 @@
+/* NewsTicker.css */
+.news-ticker-section {
+    width: 100%;
+    background-color: #0066cc; /* RVCN blue color */
+    padding: 15px 0;
+    overflow: hidden;
+  }
+  
+  .ticker-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ticker-content {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    animation: ticker 30s linear infinite;
+  }
+  
+  .ticker-item {
+    margin-right: 60px;
+    display: inline-block;
+  }
+  
+  .blinking-text {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    animation: blink 1s infinite;
+    color: white;
+  }
+  
+  .blinking-text a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  @keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .ticker-content {
+      animation: ticker 20s linear infinite;
+    }
+    
+    .blinking-text {
+      font-size: 1rem;
+    }
+    
+    .ticker-item {
+      margin-right: 30px;
+    }
+  }
